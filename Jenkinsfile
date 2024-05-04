@@ -19,7 +19,7 @@ pipeline {
 }
  post {
      always {
-          emailext attachLog: true, body: 'Success', subject: 'Testmail for first jenkins job', to: 'apputest250@gmail.com'
+          emailext attachLog: true, body: 'Success', subject: 'Pipeline status: $BUILD_NUMBER ', to: 'apputest250@gmail.com'
       }
     }
   }
