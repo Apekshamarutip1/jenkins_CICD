@@ -12,14 +12,14 @@ pipeline {
       }
       post {
      success {
-          emailext body: 'Success', subject: 'Testmail for first jenkins job', to: 'apputest250@gmail.com'
+          emailext body: 'Test stage Success', subject: 'Testmail for first jenkins job', to: 'apputest250@gmail.com'
       }
     }
   }
 }
  post {
      always {
-          emailext body: 'Success', subject: 'Testmail for first jenkins job', to: 'apputest250@gmail.com'
+          emailext attachLog: true, body: 'Success', subject: 'Testmail for first jenkins job', to: 'apputest250@gmail.com'
       }
     }
   }
