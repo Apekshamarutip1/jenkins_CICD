@@ -12,4 +12,12 @@ pipeline {
       }
     }
   }
+  post {
+        always {
+            emailext( body: 'A Test EMail', 
+               subject: 'Test'
+               to: 'apputest250@gmail.com'      
+                     )
+        }
+    }
 }
